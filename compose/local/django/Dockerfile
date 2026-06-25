@@ -21,7 +21,7 @@ COPY ./requirements /requirements
 
 RUN pip install --no-cache-dir -r /requirements/local.txt
 
-COPY ./compose/prod/django/entrypoint /entrypoint
+COPY ./compose/production/django/entrypoint /entrypoint
 RUN sed -i 's/\r//' /entrypoint
 RUN chmod +x /entrypoint
 
