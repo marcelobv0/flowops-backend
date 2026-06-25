@@ -1,0 +1,24 @@
+[tool.ruff]
+target-version = "py314"          # tu versión de Python
+line-length = 88                   # mismo default que Black
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "UP",  # pyupgrade
+    "DJ",  # flake8-django  ← reglas específicas para Django
+]
+ignore = [
+    "E501",  
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["dtax-backend"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

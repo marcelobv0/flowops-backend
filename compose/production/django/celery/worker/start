@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -o errexit
+set -o nounset
+
+# --concurrency 2: run 2 worker processes in parallel.
+celery -A config.celery worker --concurrency=1 --loglevel=info
